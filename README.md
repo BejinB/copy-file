@@ -27,20 +27,24 @@ Step 7:
 Print the output.
 ## PROGRAM:
 ```
-'''
-Program for copying the contents from one file to another file.
-Developed by: Bejin.B
-#RegisterNumber:22001908
-'''
-with open("git.txt","r") as f1:
-    with open("MyFile.txt","a") as f2:
-        for line in f1:
-            f2.write(line)
+#developed by Bejin.B
+#ref no:22001908
+print("Enter the Name of Source File: ")
+sFile = input()
+print("Enter the Name of Target File: ")
+tFile = input()
+fileHandle = open(sFile, "r")
+texts = fileHandle.readlines()
+fileHandle.close()
+fileHandle = open(tFile, "w")
+for s in texts:
+fileHandle.write(s)
+fileHandle.close()
+print("\nFile Copied Successfully!")
 ```
 ### OUTPUT:
 
-![image](https://user-images.githubusercontent.com/118367518/214828262-989a5194-e892-42ff-99dc-e2bf6032b3c6.png)
-
+![image](https://user-images.githubusercontent.com/118367518/215099723-2d73252a-2833-4fbd-bb24-c6af0abb5fee.png)
 
 ## RESULT:
 Thus the program is written to copy the contents from one file to another file.
